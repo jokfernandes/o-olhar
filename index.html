@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fbfbef">
+  <title>O OLHAR — Mais do que ver, é preciso enxergar</title>
+  <meta name="description" content="O OLHAR, de Pedro Alcântara Mello (Companhia das Letras). Mais do que ver, é preciso enxergar. Conheça uma obra que convida a descobrir novas perspectivas.">
+
+  <meta property="og:type" content="book">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="O OLHAR — Mais do que ver, é preciso enxergar">
+  <meta property="og:description" content="Conheça uma obra que convida a descobrir novas perspectivas.">
+  <meta property="og:image" content="assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preload" href="assets/Degular-Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="assets/EksellDisplay-Stencil.otf" as="font" type="font/otf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <a href="#livro" class="skip-link">Ir para o conteúdo</a>
+
+  <div class="page">
+
+    <!-- HEADER -->
+    <header class="header" id="inicio">
+      <a href="#inicio" class="logo" aria-label="O Olhar — início">
+        <img src="assets/logo.svg" width="128" height="21" alt="O Olhar">
+      </a>
+
+      <button class="menu-toggle" type="button"
+              aria-label="Abrir menu" aria-expanded="false" aria-controls="drawer">
+        <span></span><span></span>
+      </button>
+
+      <nav class="navigation" aria-label="Principal">
+        <a href="#livro">O LIVRO</a>
+        <a href="#autor">O AUTOR</a>
+        <a href="#comprar" class="nav-buy">COMPRAR</a>
+      </nav>
+    </header>
+
+    <!-- MENU MOBILE -->
+    <div class="drawer-backdrop" data-menu-close></div>
+    <aside class="drawer" id="drawer" aria-label="Menu" aria-hidden="true">
+      <div class="drawer-head">
+        <a href="#inicio" class="logo" data-menu-close aria-label="O Olhar — início">
+          <img src="assets/logo.svg" width="128" height="21" alt="O Olhar">
+        </a>
+        <button class="drawer-close" type="button" aria-label="Fechar menu" data-menu-close>x</button>
+      </div>
+      <nav class="drawer-nav" aria-label="Menu mobile">
+        <a class="item" href="#livro" data-menu-close><i></i>O livro</a>
+        <a class="item" href="#autor" data-menu-close><i></i>O autor</a>
+        <a class="item" href="#comprar" data-menu-close><i></i>Comprar</a>
+        <a class="btn-lime" href="#comprar" data-menu-close>GARANTA SEU EXEMPLAR</a>
+      </nav>
+    </aside>
+
+    <main>
+
+      <!-- HERO -->
+      <section class="hero" aria-label="Apresentação">
+        <picture>
+          <source media="(max-width: 860px)" srcset="assets/hero-mobile.webp">
+          <img class="hero-img" src="assets/hero-desktop.webp" width="2280" height="1300"
+               alt="Retrato em preto e branco de um rosto, em close no olhar" fetchpriority="high">
+        </picture>
+
+        <i class="sq sq-lime" aria-hidden="true"></i>
+        <i class="sq sq-blue" aria-hidden="true"></i>
+        <i class="sq sq-mint" aria-hidden="true"></i>
+        <i class="sq sq-navy" aria-hidden="true"></i>
+        <i class="hero-deco hero-deco-navy" aria-hidden="true"></i>
+        <i class="hero-deco hero-deco-blue" aria-hidden="true"></i>
+
+        <div class="hero-brand">
+          <img src="assets/logo.svg" width="128" height="21" alt="O Olhar">
+        </div>
+
+        <div class="hero-message">
+          <h1>MAIS DO QUE VER,&nbsp; É<br>PRECISO ENXERGAR.</h1>
+          <p>Conheça uma obra que convida a descobrir novas perspectivas.</p>
+          <a href="#comprar" class="btn-lime">GARANTA SEU EXEMPLAR</a>
+        </div>
+      </section>
+
+      <!-- O LIVRO -->
+      <section class="book" id="livro">
+        <i class="sq sq-mint" aria-hidden="true"></i>
+        <i class="sq sq-blue" aria-hidden="true"></i>
+        <i class="sq sq-lime" aria-hidden="true"></i>
+        <i class="sq sq-navy" aria-hidden="true"></i>
+        <i class="book-extra-mint" aria-hidden="true"></i>
+        <i class="book-extra-lime" aria-hidden="true"></i>
+        <i class="book-extra-blue" aria-hidden="true"></i>
+
+        <picture class="book-cover">
+          <source media="(max-width: 860px)" srcset="assets/capa-livro-mobile.webp">
+          <img src="assets/capa-livro-desktop.webp" width="654" height="848" loading="lazy"
+               alt="Capa do livro O Olhar, de Pedro Alcântara Mello, Companhia das Letras">
+        </picture>
+
+        <h2>
+          <span class="d-only">MAIS DO QUE<br>VER, É PRECISO<br>ENXERGAR</span>
+          <span class="m-only">MAIS DO<br>QUE VER, É<br>PRECISO<br>ENXERGAR</span>
+        </h2>
+
+        <div class="book-text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<span class="d-only"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></p>
+        </div>
+      </section>
+
+      <!-- O AUTOR -->
+      <section class="author" id="autor">
+        <div class="author-bg"></div>
+
+        <picture class="author-photo">
+          <source media="(max-width: 860px)" srcset="assets/autor-mobile.webp">
+          <img src="assets/autor-desktop.webp" width="1122" height="1000" loading="lazy"
+               alt="Retrato em preto e branco do autor, com o rosto dividido em faixas verticais">
+        </picture>
+
+        <div class="author-name"><h2>PEDRO ALCÂNTARA MELLO</h2></div>
+
+        <div class="author-text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <i class="sq sq-lime" aria-hidden="true"></i>
+        <i class="sq sq-blue" aria-hidden="true"></i>
+        <i class="sq sq-paper" aria-hidden="true"></i>
+      </section>
+
+      <!-- COMPRAR -->
+      <section class="buy" id="comprar">
+        <h2 class="buy-title">
+          <span class="descubra">DESCUBRA</span>
+          <img src="assets/logo-azul.svg" width="128" height="21" alt="O Olhar" loading="lazy">
+        </h2>
+
+        <p class="buy-sub">Uma nova experiência<br class="d-only"> de<br class="m-only"> leitura espera por você.</p>
+
+        <a class="btn-lime buy-btn" href="mailto:contato@exemplo.com?subject=Quero%20meu%20exemplar%20de%20O%20OLHAR">COMPRE SEU<br>EXEMPLAR</a>
+
+        <div class="photo ph-eye"><img src="assets/olho.webp" alt="Olho em close, em preto e branco" loading="lazy"></div>
+        <div class="photo ph-woman"><picture><source media="(max-width: 860px)" srcset="assets/mulher.webp"><img src="assets/mulher-desktop.webp" alt="Mulher olhando para a câmera através de um triângulo feito com as mãos" loading="lazy"></picture></div>
+        <div class="photo ph-old"><img src="assets/idoso.webp" alt="Olhar de uma pessoa idosa em close" loading="lazy"></div>
+        <div class="photo ph-eye-dark"><img src="assets/olho-rodape.webp" alt="" loading="lazy"></div>
+        <i class="sq sq-mint" aria-hidden="true"></i>
+        <i class="sq sq-blue" aria-hidden="true"></i>
+        <i class="sq sq-blue-2" aria-hidden="true"></i>
+      </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+      <a class="f-logo" href="#inicio" aria-label="O Olhar — voltar ao topo">
+        <img src="assets/logo.svg" width="128" height="21" alt="O Olhar" loading="lazy">
+      </a>
+
+      <p class="f-links">
+        <a href="#" rel="noopener">Instagram</a><i>|</i><a href="#" rel="noopener">Facebook</a><i>|</i><a href="mailto:contato@exemplo.com">Contato</a>
+      </p>
+
+      <div class="photo f-eye"><img src="assets/olho-rodape.webp" alt="" loading="lazy"></div>
+      <i class="sq sq-blue" aria-hidden="true"></i>
+      <i class="sq sq-navy" aria-hidden="true"></i>
+      <i class="sq sq-mint" aria-hidden="true"></i>
+      <i class="sq sq-lime" aria-hidden="true"></i>
+
+      <div class="f-cdl">
+        <img src="assets/companhia-das-letras.svg" width="112" height="34" alt="Companhia das Letras" loading="lazy">
+      </div>
+
+      <p class="f-copy"><span>© 2026<span class="d-only"> — </span><br class="m-only">Todos os direitos reservados.</span></p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
