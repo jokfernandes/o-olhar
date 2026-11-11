@@ -282,12 +282,12 @@ h1, h2, p { margin: 0; }
 .buy .photo { position: absolute; overflow: hidden; }
 .buy .photo picture { display: block; width: 100%; height: 100%; }
 .buy .photo img { width: 100%; height: 100%; object-fit: cover; }
-.buy .ph-eye { left: calc(486 * var(--u)); top: calc(38 * var(--u)); width: calc(204 * var(--u)); height: calc(204 * var(--u)); }
-.buy .ph-woman { left: calc(588 * var(--u)); top: calc(71 * var(--u)); width: calc(374 * var(--u)); height: calc(265 * var(--u)); }
+.buy .ph-eye { left: calc(486 * var(--u)); top: calc(38 * var(--u)); width: calc(204 * var(--u)); height: calc(204 * var(--u)); z-index: 3; }
+.buy .ph-woman { left: calc(588 * var(--u)); top: calc(71 * var(--u)); width: calc(374 * var(--u)); height: calc(265 * var(--u)); z-index: 1; }
 .buy .ph-woman img { object-position: 50% 50%; }
-.buy .ph-old { left: calc(891 * var(--u)); top: calc(165 * var(--u)); width: calc(209 * var(--u)); height: calc(196 * var(--u)); }
-.buy .sq-mint { left: calc(921 * var(--u)); top: calc(38 * var(--u)); width: calc(81 * var(--u)); height: calc(81 * var(--u)); }
-.buy .sq-blue { left: calc(547 * var(--u)); top: calc(280 * var(--u)); width: calc(81 * var(--u)); height: calc(81 * var(--u)); }
+.buy .ph-old { left: calc(891 * var(--u)); top: calc(165 * var(--u)); width: calc(209 * var(--u)); height: calc(196 * var(--u)); z-index: 2; }
+.buy .sq-mint { left: calc(921 * var(--u)); top: calc(38 * var(--u)); width: calc(81 * var(--u)); height: calc(81 * var(--u)); z-index: 2; }
+.buy .sq-blue { left: calc(547 * var(--u)); top: calc(280 * var(--u)); width: calc(81 * var(--u)); height: calc(81 * var(--u)); z-index: 2; }
 .buy .ph-eye-dark { display: none; }
 
 /* ---------- Footer ---------- */
@@ -501,8 +501,31 @@ h1, h2, p { margin: 0; }
   .hero-deco, .book-extra-mint, .book-extra-lime, .book-extra-blue, .buy .sq-blue-2 { display: none; }
 }
 
+
+/* ---------- Float + hover nas imagens e quadrados ----------
+   Usa as propriedades individuais translate/rotate/scale, que se somam ao
+   transform do GSAP (entrada e parallax) sem conflito. */
+@keyframes float-y { 0%, 100% { translate: 0 0; } 50% { translate: 0 calc(-9 * var(--u)); } }
+
+.sq, .book-cover, .buy .photo, .footer .f-eye, .book-extra-lime, .book-extra-blue, .book-extra-mint {
+  animation: float-y 5s ease-in-out infinite; /* mesma duração e fase: tudo flutua em sincronia */
+  will-change: translate;
+}
+
+.buy .photo img, .book-cover img { transition: scale .6s cubic-bezier(.2,.7,.2,1), rotate .6s cubic-bezier(.2,.7,.2,1), filter .4s; }
+.sq { transition: scale .35s cubic-bezier(.2,.7,.2,1), rotate .35s cubic-bezier(.2,.7,.2,1); }
+
+@media (hover: hover) {
+  .buy .photo:hover img { scale: 1.08; filter: contrast(1.08); }
+  .book-cover:hover img { scale: 1.05; rotate: -2.5deg; }
+  .sq:hover { scale: 1.07; rotate: 2deg; }
+  .author-photo img { transition: filter .5s; }
+  .author-photo:hover img { filter: contrast(1.08) brightness(1.04); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .drawer, .drawer-backdrop, .drawer-nav > *, .drawer-nav a.item::after { transition: none; }
   .buy-btn::after { animation: none; }
+  .sq, .book-cover, .buy .photo, .footer .f-eye, .book-extra-lime, .book-extra-blue, .book-extra-mint { animation: none !important; }
 }
